@@ -1,0 +1,66 @@
+.output {
+  padding-top: 10rem;
+  @include container;
+
+  &--display {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.8rem;
+    background-color: white;
+    border-radius: 1rem;
+    padding: 1rem 1.5rem;
+
+    p {
+      margin: 0;
+    }
+
+    &__right {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 2rem;
+      p {
+        color: $cyan;
+      }
+
+      &--btn {
+        background-color: $cyan;
+        color: white;
+        padding: 0.6rem 3rem;
+        border-radius: 0.8rem;
+        cursor: pointer;
+        &:hover {
+          background-color: $darkViolet;
+        }
+      }
+    }
+
+    @include respond(md) {
+      flex-direction: column;
+      font-size: 2.4rem;
+      align-items: start;
+      padding: 1.5rem;
+      p {
+        text-align: center;
+      }
+      &__left {
+        padding-bottom: 1.5rem;
+      }
+      &__right {
+        flex-direction: column;
+        align-items: start;
+        gap: 0;
+        width: 100%;
+        padding-top: 1.5rem;
+        border-top: 1px solid $gray;
+        &--btn {
+          width: 100%;
+          padding: 1rem 0;
+          text-align: center;
+          margin-top: 1.5rem;
+        }
+      }
+    }
+  }
+}

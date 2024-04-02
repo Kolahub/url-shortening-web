@@ -1,0 +1,36 @@
+.stats {
+  background-color: lighten($gray, 20%);
+  margin-top: -7.5rem;
+
+  &--content {
+    padding: 15rem 0;
+
+    &__typo {
+      max-width: 45rem;
+      margin: 0 auto;
+      text-align: center;
+      h1 {
+        font-size: 3rem;
+        font-weight: 700;
+      }
+
+      p {
+        font-size: 1.8rem;
+        color: $violet;
+      }
+    }
+    @include respond(md) {
+      h1 {
+        font-size: 3.6rem;
+      }
+
+      p {
+        font-size: 2rem;
+      }
+    }
+  }
+
+  @include respond(md) {
+    margin-top: -8.5rem;
+  }
+}

@@ -1,0 +1,52 @@
+.boost {
+  background-image: url(../images/bg-boost-desktop.svg);
+  background-size: cover;
+  background-color: $darkViolet;
+  padding: 7rem 0;
+
+  &--content {
+    @include container;
+    h1 {
+      text-align: center;
+      font-size: 5rem;
+      font-weight: 600;
+      color: white;
+    }
+    &__btnBox {
+      max-width: 30rem;
+      margin: 0 auto;
+      margin-top: 2rem;
+    }
+    &__btn {
+      font-size: 1.8rem;
+      font-weight: 600;
+      color: white;
+      background-color: lighten($cyan, 10%);
+      width: 87%;
+      border: none;
+      padding: 1.5rem 2rem;
+      border-radius: 30px;
+      transition: all 0.3s;
+
+      &:hover {
+        background-color: $veryDarkViolet;
+      }
+    }
+  }
+  @include respond(md) {
+    background-image: url(../images/bg-boost-mobile.svg);
+    padding: 12rem 0;
+
+    &--content {
+      h1 {
+        font-size: 3.8rem;
+      }
+      &__btnBox {
+        margin-top: 3rem;
+      }
+      &__btn {
+        font-size: 2.4rem !important;
+      }
+    }
+  }
+}

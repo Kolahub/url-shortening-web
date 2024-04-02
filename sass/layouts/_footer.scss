@@ -1,0 +1,67 @@
+.footer {
+  padding: 12rem 0;
+  background-color: $veryDarkViolet;
+
+  &--content {
+    display: flex;
+    justify-content: space-between;
+    @include container;
+  }
+
+  &__nav {
+    display: flex;
+    gap: 4rem;
+    &--items {
+      list-style-type: none;
+    }
+    &--heading {
+      font-size: 2rem;
+      font-weight: 600;
+      color: white;
+      margin-bottom: 1.8rem;
+    }
+
+    &--links {
+      font-size: 1.8rem;
+      color: $violet;
+      text-decoration: none;
+
+      &:hover {
+        color: $cyan;
+      }
+    }
+  }
+
+  &__contacts {
+    display: flex;
+    align-items: start;
+    gap: 2rem;
+    cursor: pointer;
+
+    &--logo path {
+      &:hover {
+        fill: $cyan !important;
+      }
+    }
+  }
+
+  @include respond(md) {
+    &--content {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 6rem;
+    }
+    &__nav {
+      text-align: center;
+      flex-direction: column;
+
+      &--heading {
+        font-size: 2.5rem;
+      }
+      &--links {
+        font-size: 2rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,29 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%; // 1rem = 1px; 10px/16px =62.5%
+  
+  @include respond(tab-land) {
+    font-size: 56.25%; // 1rem = 9px; 9px/16px = 50%
+  }
+  @include respond(lg) {
+    font-size: 50%; // 1rem = 8px
+  }
+  @include respond(big-desktop) {
+    font-size: 75%; // 1rem = 12px
+  }
+}
+body {
+    font-family: "Poppins", sans-serif;
+    box-sizing: inherit;
+}
+
+.hidden {
+  display: none;
+}

@@ -1,0 +1,93 @@
+.cards {
+  @include container;
+  display: flex;
+  gap: 4rem;
+  margin-top: 15rem;
+  position: relative;
+
+  &--box {
+    background-color: white;
+    position: relative;
+    padding: 7rem 4.5rem 3rem 2.5rem;
+    border-radius: 0.8rem;
+    z-index: 2;
+
+    &__one {
+      flex: 1;
+      transform: translateY(-40px);
+    }
+
+    &__two {
+      flex: 1;
+    }
+
+    &__three {
+      flex: 1;
+      transform: translateY(40px);
+    }
+
+    h1 {
+      font-size: 2rem;
+      font-weight: 600;
+    }
+    p {
+      font-size: 1.8rem;
+      color: $violet;
+      margin: 0;
+      margin-top: 1.5rem;
+    }
+
+    &__img {
+      position: absolute;
+      top: -4rem;
+      left: 4rem;
+      background-color: $darkViolet;
+      height: 8rem;
+      width: 8rem;
+      border-radius: 50%;
+    }
+
+    &__pic {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    @include respond(md) {
+      text-align: center;
+      padding: 7rem 2rem 3rem 2.5rem;
+      h1 {
+        font-size: 2.5rem;
+      }
+      p {
+        font-size: 2rem;
+      }
+      &__img {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+  }
+
+  &--line {
+    background-color: $cyan;
+    height: 5px;
+    position: absolute;
+    top: 93px;
+    z-index: 1;
+    width: 100%;
+  }
+
+  @include respond(md) {
+    flex-direction: column;
+
+    &--line {
+      height: 100%;
+      width: 5px;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+}

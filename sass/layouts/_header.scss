@@ -1,0 +1,22 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: rgb(255, 255, 255);
+  z-index: 2000;
+
+  &--content {
+    height: 80px;
+    @include container;
+  }
+
+  &--form {
+    @include respond(md) {
+      width: calc(100% - 50px);
+      margin: 0 25px;
+      padding-top: 2.5rem;
+      border-top: 1px solid $gray;
+    }
+  }
+}

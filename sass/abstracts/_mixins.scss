@@ -1,0 +1,43 @@
+@mixin container {
+  max-width: calc(100% - 20rem);
+  margin: 0 auto;
+  @include respond(lg) {
+    max-width: calc(100% - 10rem);
+  }
+  @include respond(md) {
+    max-width: calc(100% - 4rem);
+  }
+}
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == xs {
+    @media only screen and (max-width: 28.125em) {
+      @content;
+    }
+  }
+  @if $breakpoint == sm {
+    @media only screen and (max-width: 36em) {
+      @content;
+    }
+  }
+  @if $breakpoint == md {
+    @media only screen and (max-width: 48em) {
+      @content;
+    }
+  }
+  @if $breakpoint == lg {
+    @media only screen and (max-width: 62em) {
+      @content;
+    }
+  }
+  @if $breakpoint == tab-land {
+    @media only screen and (max-width: 75em) {
+      @content;
+    }
+  }
+  @if $breakpoint == big-desktop {
+    @media only screen and (min-width: 112.5em) {
+      @content;
+    }
+  }
+}
