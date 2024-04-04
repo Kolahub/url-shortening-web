@@ -1,6 +1,7 @@
 .output {
   padding-top: 10rem;
   @include container;
+  margin-top: 2rem;
 
   &--display {
     display: flex;

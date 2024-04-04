@@ -1,0 +1,25 @@
+.error {
+    font-size: 1.9rem;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 10rem;
+    right: 2rem;
+    width: auto;
+    transform: translateX(10rem);
+    padding: .5rem 1.5rem;
+    background-color: $red;
+    color: white;
+    z-index: 1000;
+    transition: all .3s;
+
+    img {
+        transform: scale(1.1);
+        margin-left: 2rem;
+    }
+
+    @include respond(md) {
+        font-size: 2.3rem;
+        top: 15rem;
+    }
+}

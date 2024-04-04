@@ -72,24 +72,33 @@
 
       <section class="form">
         <form class="form--content">
-          <input type="text" class="form--content__input" id="apiInput" placeholder="Shorten a link here..." />
+          <input type="text" class="form--content__input apiInput" id="" placeholder="Shorten a link here..." />
           <button type="submit" class="form--content__btn shortenBtn">Shorten it!</button>
         </form>
         <p class="hidden">Please add a link</p>
       </section>
 
+      <div class="loader hidden"></div>
+      <div class="error"></div>
+
       <section class="stats">
-        <!-- <div class="output">
-          <div class="output--display" id="outputBox">
-            <div class="output--display__left col-x-12 col-md-0 text-truncate">
-              https://www.frontendmentor.iojk
+        <div class="output">
+        <!-- <div class="output--display d-flex justify-content-between align-items-center" id="outputBox">
+            <div class="output--display__left col-12 col-md-5 text-truncate">
+              https://www.example.com/this-is-a-very-long-url-that-will-help-you-test-your-url-shortener-web-service-and-see-how-it-handles-lengthy-urls-and-redirects-properly-and-accurately-and-provides-the-shortened-url-as-expected-and-functions-flawlessly
             </div>
-            <div class="output--display__right">
+            <div class="output--display__right d-flex justify-content-end align-items-center col-md-4">
               <p class="outputLink">https://www.front</p>
               <div class="output--display__right--btn copyBtn">copy</div>
             </div>
-          </div>
-        </div> -->
+          </div> -->
+        </div>
+
+        <div class="clear hidden">
+          <div class="clear--btn">Clear data</div>
+        </div>
+
+
 
         <div class="stats--content">
           <div class="stats--content__typo">
